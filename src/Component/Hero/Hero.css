@@ -1,0 +1,158 @@
+/* this styling is for the whole hero box */
+/* .hero_body{
+    width: 100%;
+    height:900px;
+    color: #ffffff;
+    margin-top: 50px;
+    z-index: 1;
+    overflow: hidden;
+}
+ */
+
+
+
+.heroContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    width: 100%;
+    height:100vh;
+    color: #ffffff;
+    border-bottom: 3px solid  #B27909;
+    overflow: hidden;
+
+
+}
+/* this styling is for the text  in the left side of the hero box */
+.hero_text{
+   width:50%;
+   position: relative;
+   margin-top:50px ;
+   z-index: 1000; /* makes the bold hero text visible */
+   
+}
+.gradient{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to right,black, black);
+    opacity: 0.3;
+    z-index: 1;
+
+}
+.video_hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* this styling is for the first text */
+.text_1{
+    color: #BFBFBF;
+    margin-bottom: 10px;
+   
+}
+/* this styling is for the bold text */
+.text_2{
+     font-size: 40px;
+     margin-bottom: 10px;
+}
+.hero_img{
+    width: 350px;
+    height: 380px;
+    object-fit: cover;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 11px -2px 0px 0px rgba(66,64,5,0.5);
+    margin-top: 20px;  
+    cursor: pointer;  
+    transition: ease-out 0.5s;
+    z-index: 1000;
+    
+}
+.hero_img:hover{
+  transition: ease-in 3s;
+}
+
+
+
+@media (max-width:760px)  {
+    .heroContainer{
+        display: inline-block;
+        height: 1000px;
+        width: 100%;
+        overflow: hidden;
+        
+    }
+    .hero_text{
+      margin-top:170px ;
+      margin-left : 3px;
+      margin-right: 8px;
+      /* margin-bottom: 5px; */
+      width:100%;
+    }
+    .text_1{
+        white-space: nowrap;
+    }
+    .text_2{
+        font-size: 25px;
+        margin-bottom: 5px;
+  
+   }
+   .hero_img{
+    margin-left : 15px;
+    margin-right: 15px;
+    width: 300px;
+    height: 320px;
+    margin-bottom: 100px;
+     
+}
+
+}
+
+
+@media (max-width:350px) {
+    .hero_text{
+        margin-top:170px ;
+        margin-left : 3px;
+        margin-right: 8px;
+        /* margin-bottom: 5px; */
+        width:100%;
+      }
+
+      .text_1{
+      font-size: small;
+    }
+
+    .text_2{
+        font-size: 20px;
+        margin-bottom: 5px;
+  
+   }
+    .text_3{
+        font-size: smaller;
+    }
+
+    .hero_img{
+        width: 250px;
+        height: 250px;
+        margin-bottom: 100px;
+     
+        
+    }
+
+
+   
+ } 
+ @media (min-width:1024px){
+       .hero_img{
+        margin-top: 150px;
+       } 
+    
+
+
+}

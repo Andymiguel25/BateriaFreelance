@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* the nav flex the whole nav bar  */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    /* background-color: grey; */
+    font-size: large;
+    color: white;
+    cursor: pointer;
+    gap: 20px;
+    border-bottom: 2px solid #B27909;
+    z-index: 1000;   /* z index ensures the navbar stays on top of other element */
+    position: absolute;
+ 
+}
+
+/* this styling adds effects to the home name and the social media icon */
+nav .home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+nav .homeName{
+    font-size:30px;
+    font-family: 'Times New Roman', Times, serif;
+    border-right: 2px solid #B27909;
+    padding-right: 25px;
+}
+
+
+/* This changes the home logo color */
+.mic{
+    color: #B27909;
+}
+
+
+/* Social media styling */
+nav .socialMedia_icon li{
+    list-style: none;
+    display: inline-block;
+    width: 35px;
+    font-size:23px;
+    padding-top: 6px;
+    transition: ease-out 0.5s; 
+    background-color: transparent;
+}
+nav .socialMedia_icon li:hover {
+    color: #B27909;
+    transition: ease-in 0.3s;
+    font-size: 20px;
+}
+
+
+
+/* this styling adds effects to the nav options and the nav icon */
+nav .options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: transparent;
+    
+}
+
+/* Styling for the home options */
+nav .home_options ul li {
+    list-style: none;
+    display:inline-block;
+    width: 100px; 
+   
+}
+
+
+/* this styling adds a border to the last options */
+nav .home_options ul li:last-child{
+    border-right: 2px solid #B27909;
+}
+
+/* this targets the first nav option (the home button) */
+.home_options ul li:first-child{
+    color: #B27909;
+}
+
+
+/* styling for the nav options */
+nav .nav-icons ul li{
+    list-style: none;
+    display:inline-block;
+    width: 30px;
+}
+ 
+/* styling for nav option submenu */
+ .nav_submenu{
+    display: none;
+   position:absolute ;
+   background-color: brown;
+   width: 150px;
+   height: 100px;
+   z-index: 1;
+   top: 100%;/* top 100% positions the submenu below the nav container */
+   border-top: 2px solid gray;
+   white-space: nowrap; /* white space prevnts line break  on long words */
+   opacity:  0; /* sets initial transparency of  submenu*/
+   transition: opacity 0.4s ease; /* transition property and duration  smoothly */
+   
+   
+ }
+ .nav_submenu li {
+    text-align: center;
+    /* padding: 10x; */
+    margin-bottom:15px;
+    transition: ease-out 2s; 
+ }
+ .home_options:hover .nav_submenu{
+    display: block;
+    opacity:  1; /* makes the submenu slowly visible when  user hovers over it */
+ }
+ .home_options:hover .nav_submenu li{
+    display: block;
+ }
+ .nav_submenu li:hover{
+    background-color: rgba(0,0,0,0.3);
+ }
+
+ 
+ 
+ @media (max-width:328px) {
+    nav{
+     margin-bottom: 100px;
+     font-size: small;
+    }
+    nav .homeName{
+    font-size: 20px;
+    }
+    nav .socialMedia_icon li{
+    font-size: 15px;
+    }
+
+ }
